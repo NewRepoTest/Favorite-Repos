@@ -1,0 +1,33 @@
+h1 {
+	font-size: 27px;
+}
+
+.heading {
+	background-color: #5c5cd6;
+	height: 100px; 
+}
+
+.heading-text {
+	color: white;
+	padding-top: 35px;
+}
+
+.favs-col {
+	background-color: rgba(92, 92, 214, 0.2);
+}
+
+.col-md-6 {
+	height: 1000px;
+}
+
+.search-input {
+	padding: 30px;
+}
+
+a {
+	color: black;
+}
+
+.favs-col {
+	padding: 15px;
+}

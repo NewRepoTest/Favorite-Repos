@@ -1,0 +1,56 @@
+<%= stylesheet_link_tag "index.css" %>
+
+<div class="heading">
+	<h1 class="heading-text text-center">My Github Favorities<h1>
+</div>
+
+<div class="content container-fluid">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="row search-input">
+				<div class="col-md-9">
+					<div class="form-group">
+		    		<input class="form-control" id="username" placeholder="Username">
+		  		</div>
+		  	</div>
+		  	<div class="col-md-3">
+		  		<button class="btn btn-primary" id="search-btn">Search</button>
+		  	</div>
+	  	</div>
+			<table class="table">
+			  <thead>
+			    <tr>
+			      <th scope="col">Name</th>
+			      <th scope="col">Language</th>
+			      <th scope="col">Latest Tag</th>
+			      <th scope="col"></th>
+			    </tr>
+			  </thead>
+			  <tbody id="repo-list">
+			  </tbody>
+			</table>
+		</div>
+		<div class="favs-col col-md-6">
+			<table class="table">
+			  <thead>
+			    <tr>
+			      <th scope="col">Name</th>
+			      <th scope="col">Language</th>
+			      <th scope="col">Latest Tag</th>
+			      <th scope="col"></th>
+			    </tr>
+			  </thead>
+			  <tbody id="fav-repo-list">
+			  	<% @fav_repos.each do |repo| %>
+			  		<tr>
+		      		<td class="url" text="<%= repo.full_name %>"><a href="<%= repo.url %>" target="_blank"> <%= repo.full_name %> </a></td>
+				      <td class="language"><%= repo.language %></td>
+				      <td class="version"><%= repo.version %></td>
+				      <td class="remove-btn"><button class="btn btn-danger"> Remove </button></td>
+		    		</tr>
+		    	<% end %>
+			  </tbody>
+			</table>
+		</div>
+	</div>
+</div>
