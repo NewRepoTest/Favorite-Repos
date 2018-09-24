@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+	// On click to send request for repository search
 	$('#search-btn').on('click', function() {
 		var username = $('#username').val()
 
@@ -37,6 +39,7 @@ $(document).ready(function() {
 		let url = $(this).siblings('.url').attr('text-url') 
 		let language = $(this).siblings('.language').attr('text')
 		let version = $(this).siblings('td.version').attr('text')
+		$(this).html(' ')
 
 		$.ajax({
       type: "POST",
